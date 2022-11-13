@@ -7,6 +7,14 @@
 ```
 docker buildx build --platform linux/amd64 -f ./Dockerfile -t wallet .
 ```
+* connect to the ECR
+```
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 712218945685.dkr.ecr.us-west-2.amazonaws.com
+```
+* build to target for x86 & x64 environments
+```
+docker buildx build --platform linux/amd64 -f ./Dockerfile -t wallet .
+```
 * tag to the docker image
 ```
 docker tag wallet:latest 712218945685.dkr.ecr.ap-northeast-2.amazonaws.com/wallet:latest
