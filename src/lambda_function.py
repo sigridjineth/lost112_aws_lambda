@@ -354,7 +354,7 @@ def lambda_handler(*args, **kwargs):
         trs = soup.find_all('tr')
 
         for tr in trs:
-            if tr.find('a', text='지갑') or tr.find('a', text='남성지갑') or tr.find('a', text='여성지갑') or tr.find('a', text='박*형') or tr.find('a', text='대전역'):
+            if tr.find('a', text='지갑') or tr.find('a', text='남성지갑') or tr.find('a', text='여성지갑') or tr.find('a', text='카드지갑') or tr.find('a', text='박*형') or tr.find('a', text='대전역') or tr.find('a', text='수서역'):
                 print("check!")
                 tds = tr.find_all('td')
                 for td in tds:
